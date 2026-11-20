@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Haybredx | تمارين منزلية بلا معدات</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F4F6FA; --surface:#FFFFFF; --ink:#101828; --muted:#566074; --line:#DCE2EE;
+  --blue:#2740D8; --blue-ink:#FFFFFF; --sun:#FFB703; --tint:#E6EAFB;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0D1220; --surface:#161D31; --ink:#EEF1F8; --muted:#A0AAC0; --line:#2A3350;
+    --blue:#7C8CFF; --blue-ink:#0D1220; --sun:#FFC933; --tint:#1E2747; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0D1220; --surface:#161D31; --ink:#EEF1F8; --muted:#A0AAC0; --line:#2A3350;
+  --blue:#7C8CFF; --blue-ink:#0D1220; --sun:#FFC933; --tint:#1E2747; color-scheme:dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Cairo",system-ui,"Segoe UI",Tahoma,sans-serif;line-height:1.7;font-size:17px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:900;font-size:22px;text-decoration:none;letter-spacing:-.01em}
+.logo{display:inline-flex;align-items:center;gap:8px}
+.logo .mark{display:block;flex:none;height:40px;width:17.1px;background:var(--ink);-webkit-mask:url(data:image/png;base64,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) center/contain no-repeat;mask:url(data:image/png;base64,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) center/contain no-repeat}
+nav{display:flex;gap:22px;align-items:center}
+nav a{text-decoration:none;font-weight:600;font-size:15px;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--blue);color:var(--blue-ink);border:0;border-radius:10px;padding:12px 22px;font:inherit;font-weight:800;cursor:pointer;text-decoration:none}
+.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.hero{padding:56px 0 72px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+h1{font-size:clamp(36px,6vw,64px);line-height:1.15;font-weight:900;margin:0 0 18px;letter-spacing:-.02em}
+.lead{color:var(--muted);font-size:19px;max-width:34em;margin:0 0 28px}
+.hero .actions{display:flex;gap:12px;flex-wrap:wrap}
+.facts{display:flex;gap:28px;margin-top:36px;color:var(--muted);font-size:15px;flex-wrap:wrap}
+.facts b{display:block;color:var(--ink);font-size:20px}
+/* timer */
+.timer{background:var(--ink);color:var(--bg);border-radius:28px;padding:28px;text-align:center}
+.timer small{opacity:.7;font-weight:600}
+.ring{position:relative;width:min(260px,70vw);aspect-ratio:1;margin:14px auto}
+.ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ring circle{fill:none;stroke-width:10}
+.ring .bg{stroke:rgba(128,140,180,.3)}
+.ring .fg{stroke:var(--sun);stroke-linecap:round;transition:stroke-dashoffset .25s linear,stroke .2s}
+.ring.rest .fg{stroke:#6EE7B7}
+.ring .num{position:absolute;inset:0;display:grid;place-content:center;font-size:64px;font-weight:900;line-height:1}
+.ring .num span{font-size:15px;font-weight:600;opacity:.75;margin-top:6px}
+.now{font-size:24px;font-weight:800;margin:4px 0 2px;min-height:1.6em}
+.timer .btn{background:var(--sun);color:#101828;margin-top:14px;min-width:150px}
+/* sections */
+section{padding:72px 0}
+section.alt{background:var(--surface);border-block:1px solid var(--line)}
+h2{font-size:clamp(28px,4vw,40px);line-height:1.2;font-weight:900;margin:0 0 10px;letter-spacing:-.01em}
+.sub{color:var(--muted);margin:0 0 36px;max-width:36em}
+.programs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.prog{background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:26px;display:flex;flex-direction:column}
+.prog.main{background:var(--blue);color:var(--blue-ink);border-color:var(--blue)}
+.prog h3{margin:0 0 4px;font-size:22px;font-weight:800}
+.prog .meta{font-size:14px;opacity:.8;margin-bottom:14px}
+.prog ul{margin:0 0 20px;padding:0 18px 0 0;flex:1}
+.prog li{margin-bottom:4px}
+.prog a{font-weight:800}
+/* library */
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.chip{border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:6px 16px;font:inherit;font-weight:600;font-size:15px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.lib{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.ex{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.ex h4{margin:0;font-size:18px;font-weight:800}
+.ex p{margin:2px 0 0;color:var(--muted);font-size:15px}
+.ex .lvl{display:inline-block;margin-top:8px;font-size:13px;font-weight:700;background:var(--tint);color:var(--blue);border-radius:6px;padding:0 8px}
+.ex{display:block;width:100%;text-align:start;font:inherit;color:inherit;cursor:pointer}
+.ex:hover{border-color:var(--blue)}
+.ex .go{display:block;margin-top:8px;font-size:14px;font-weight:700;color:var(--blue)}
+dialog{border:1px solid var(--line);border-radius:20px;background:var(--surface);color:var(--ink);padding:22px;width:min(560px,94vw);max-height:92vh}
+dialog::backdrop{background:rgba(8,12,24,.6)}
+.dh{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.dh h3{margin:0;font-size:26px;font-weight:900}
+.dh button{border:0;background:var(--tint);color:var(--ink);width:38px;height:38px;border-radius:50%;font-size:18px;cursor:pointer}
+#fig{width:100%;height:auto;background:var(--tint);border-radius:14px;margin:14px 0 10px;display:block}
+#fig line{stroke:var(--ink);stroke-width:7;stroke-linecap:round}
+#fig .far{opacity:.5}
+#fig circle{fill:var(--ink)}
+#fig #gr{stroke:var(--line);stroke-width:2}
+#fig #prop *{fill:var(--blue);stroke:none}
+.ctl{display:flex;gap:8px;margin-bottom:12px}
+.dm{color:var(--muted);margin:0 0 6px;font-size:15px}
+dialog h4{margin:12px 0 4px;font-size:18px;font-weight:800}
+dialog ol{margin:0;padding:0 22px 0 0}
+dialog li{margin-bottom:6px}
+.tip{background:var(--tint);border-radius:10px;padding:8px 14px;margin-top:8px;font-size:15px}
+.bgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.bform,.bout{background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:22px}
+.bform{display:grid;gap:14px;align-content:start}
+.bform label{display:grid;gap:4px;font-weight:700;font-size:15px}
+select{font:inherit;padding:10px 12px;border-radius:10px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink)}
+.bout ol{margin:0 0 16px;padding:0 22px 0 0}
+.bout li{margin-bottom:6px;font-weight:700}
+.bout li span{display:block;color:var(--muted);font-size:14px;font-weight:400}
+.bout .empty{color:var(--muted);margin:0}
+.bout h4{margin:0 0 8px;font-size:18px}
+.th{margin:40px 0 12px;font-size:22px;font-weight:800}
+.track{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}
+.track button{font:inherit;font-weight:700;font-size:14px;padding:14px 4px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
+.track button[aria-pressed="true"]{background:var(--blue);color:var(--blue-ink);border-color:var(--blue)}
+@media (max-width:820px){.bgrid{grid-template-columns:1fr}.track{grid-template-columns:repeat(4,1fr)}}
+/* black and gray palette */
+:root{--bg:#ECEDEF;--ink:#0A0A0A;--muted:#5A5E66;--line:#CBCED4;--tint:#DFE1E5}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0A0A0A;--surface:#17181A;--ink:#F2F2F3;--muted:#A1A5AD;--line:#2E3035;--tint:#232427;--blue-ink:#0A0A0A}}
+:root[data-theme="dark"]{--bg:#0A0A0A;--surface:#17181A;--ink:#F2F2F3;--muted:#A1A5AD;--line:#2E3035;--tint:#232427;--blue-ink:#0A0A0A}
+.timer,.cta{background:#0A0A0A;color:#ECEDEF;border:1px solid #2E3035}
+.ring .bg{stroke:#3A3C41}
+.prog.main{background:#0A0A0A;color:#F2F2F3;border-color:#2E3035}
+.prog.main a{color:var(--sun)}
+.prog.main .meta{opacity:.7}
+footer{background:#0A0A0A;color:#A1A5AD}
+/* yellow to gray */
+:root{--sun:#B4B8BF}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--sun:#B4B8BF}}
+:root[data-theme="dark"]{--sun:#B4B8BF}
+/* week */
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}
+.day{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 8px;text-align:center;font-size:14px}
+.day b{display:block;font-size:15px;margin-bottom:4px}
+.day.rest{background:transparent;border-style:dashed;color:var(--muted)}
+.scroll{overflow-x:auto}
+.scroll .week{min-width:640px}
+/* cta */
+.cta{background:var(--ink);color:var(--bg);border-radius:28px;padding:48px 32px;text-align:center}
+.cta h2{margin-bottom:8px}
+.cta p{opacity:.8;margin:0 auto 24px;max-width:30em}
+.cta form{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.cta input{font:inherit;padding:12px 16px;border-radius:10px;border:0;min-width:min(300px,100%);background:#fff;color:#101828}
+.cta .btn{background:var(--sun);color:#101828}
+#msg{min-height:1.6em;margin-top:14px;font-weight:600}
+footer{padding:36px 0 48px;color:var(--muted);font-size:14px;text-align:center}
+@media (max-width:820px){
+  .hero .wrap{grid-template-columns:1fr}
+  .programs{grid-template-columns:1fr}
+  nav a:not(.btn){display:none}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ring .fg{transition:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top" dir="ltr" aria-label="Haybredx"><i class="mark" aria-hidden="true"></i><span>Haybredx</span></a>
+    <nav aria-label="القائمة الرئيسية">
+      <a href="#programs">البرامج</a>
+      <a href="#library">التمارين</a>
+      <a href="#builder">برنامجي</a>
+      <a href="#week">الأسبوع</a>
+      <a class="btn" href="#builder">ابدا دابا</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <h1>تمارين في دارك، بلا معدات وبلا نادي.</h1>
+      <p class="lead">برامج واضحة من 20 إلى 40 دقيقة، مصممة للمبتدئين والمتقدمين. اختار برنامجك، حط المؤقت، وبدا من الصالون.</p>
+      <div class="actions">
+        <a class="btn" href="#programs">اختار برنامجك</a>
+        <a class="btn ghost" href="#library">شوف التمارين</a>
+      </div>
+      <div class="facts">
+        <div><b>3 برامج</b>حسب مستواك</div>
+        <div><b>20 دقيقة</b>تكفي للبداية</div>
+        <div><b>0 درهم</b>معدات مطلوبة</div>
+      </div>
+    </div>
+
+    <div class="timer" aria-label="مؤقت التمرين">
+      <small id="round">جولة 1 من 6 · جرب دابا</small>
+      <div class="ring" id="ring">
+        <svg viewBox="0 0 120 120" aria-hidden="true"><circle class="bg" cx="60" cy="60" r="54"/><circle class="fg" id="fg" cx="60" cy="60" r="54" stroke-dasharray="339.3" stroke-dashoffset="0"/></svg>
+        <div class="num"><div id="sec" aria-live="off">40</div><span id="phase">تمرين</span></div>
+      </div>
+      <div class="now" id="now">Squat</div>
+      <small id="next">التالي: Push-up</small><br>
+      <button class="btn" id="go" type="button">ابدا التمرين</button>
+    </div>
+  </div>
+</div>
+
+<section id="programs" class="alt">
+  <div class="wrap">
+    <h2>اختار البرنامج لي كيناسبك</h2>
+    <p class="sub">كل برنامج كيدوم 4 أسابيع، 3 إلى 5 حصص في الأسبوع.</p>
+    <div class="programs">
+      <article class="prog">
+        <h3>البداية</h3>
+        <div class="meta">20 دقيقة · 3 حصص في الأسبوع</div>
+        <ul><li>تمارين بوزن الجسم فقط</li><li>إحماء وتمدد مشروحين</li><li>مثالي إلا كنتي كترجع للرياضة</li></ul>
+        <a href="#join">ابدا هاد البرنامج</a>
+      </article>
+      <article class="prog main">
+        <h3>حرق الدهون</h3>
+        <div class="meta">30 دقيقة · 4 حصص في الأسبوع</div>
+        <ul><li>دورات تمارين بمؤقت 40 ثانية</li><li>رفع نبض القلب بلا قفز مزعج للجيران</li><li>مناسب لمستوى متوسط</li></ul>
+        <a href="#join">ابدا هاد البرنامج</a>
+      </article>
+      <article class="prog">
+        <h3>القوة</h3>
+        <div class="meta">40 دقيقة · 5 حصص في الأسبوع</div>
+        <ul><li>تمارين أصعب مع قنينات ماء أو شنطة</li><li>تقسيم العضلات على أيام الأسبوع</li><li>للمتقدمين</li></ul>
+        <a href="#join">ابدا هاد البرنامج</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="library">
+  <div class="wrap">
+    <h2>مكتبة التمارين</h2>
+    <p class="sub">فلتر حسب العضلة لي بغيتي تخدم عليها، وكليكي على أي تمرين باش تشوف الحركة متحركة مع الشرح.</p>
+    <div class="chips" id="chips" role="group" aria-label="تصفية التمارين"></div>
+    <div class="lib" id="lib"></div>
+  </div>
+</section>
+
+<section id="builder" class="alt">
+  <div class="wrap">
+    <h2>صاوب برنامجك دابا</h2>
+    <p class="sub">اختار مستواك والمدة والعضلة لي بغيتي. غادي يتصاوب ليك تمرين كل مرة بشكل جديد، وتقدر تبدا بالمؤقت فالصفحة الرئيسية.</p>
+    <div class="bgrid">
+      <div class="bform">
+        <label>المستوى<select id="bl"><option>مبتدئ</option><option>متوسط</option><option>متقدم</option></select></label>
+        <label>المدة<select id="bt"><option value="5">5 تمارين · 3 جولات · حوالي 15 دقيقة</option><option value="7">7 تمارين · 3 جولات · حوالي 21 دقيقة</option><option value="10">10 تمارين · 3 جولات · حوالي 30 دقيقة</option></select></label>
+        <label>التركيز<select id="bf"></select></label>
+        <button class="btn" id="bm" type="button">صاوب البرنامج</button>
+      </div>
+      <div class="bout">
+        <p class="empty" id="be">اضغط على «صاوب البرنامج» باش تشوف تمارينك.</p>
+        <ol id="bo"></ol>
+        <button class="btn" id="bs" type="button" hidden>ابدا بالمؤقت</button>
+      </div>
+    </div>
+    <h3 class="th">تتبع أسبوعك</h3>
+    <div class="track" id="tr"></div>
+    <p class="sub" id="tt" style="margin:12px 0 8px"></p>
+    <button class="chip" id="tx" type="button">مسح التقدم</button>
+  </div>
+</section>
+
+<section id="week">
+  <div class="wrap">
+    <h2>مثال على أسبوعك</h2>
+    <p class="sub">برنامج حرق الدهون، 4 حصص و3 أيام راحة.</p>
+    <div class="scroll">
+      <div class="week">
+        <div class="day"><b>الاثنين</b>كامل الجسم<br>30 د</div>
+        <div class="day rest"><b>الثلاثاء</b>راحة</div>
+        <div class="day"><b>الأربعاء</b>الأرجل والبطن<br>30 د</div>
+        <div class="day rest"><b>الخميس</b>مشي خفيف</div>
+        <div class="day"><b>الجمعة</b>الصدر والذراعين<br>30 د</div>
+        <div class="day"><b>السبت</b>دورة كارديو<br>30 د</div>
+        <div class="day rest"><b>الأحد</b>راحة</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="join">
+  <div class="wrap">
+    <div class="cta">
+      <h2>ابدا برنامجك اليوم</h2>
+      <p>اختار مستواك وصاوب برنامج ديالك فثواني، وعلّم على أيام تمرينك باش تتبع تقدمك.</p>
+      <form id="form">
+        
+        <a class="btn" href="#builder">صاوب برنامجك دابا</a>
+      </form>
+      <div id="msg" role="status"></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<dialog id="dlg" aria-labelledby="dt">
+  <div class="dh"><h3 id="dt"></h3><button type="button" id="dx" aria-label="إغلاق">✕</button></div>
+  <svg id="fig" viewBox="0 -6 200 120" role="img" aria-label="رسم متحرك للتمرين"><line id="gr" x1="8" y1="107" x2="192" y2="107"/><g id="prop"></g></svg>
+  <div class="ctl"><button class="chip" id="pp" type="button">إيقاف الحركة</button><button class="chip" id="sl" type="button" aria-pressed="false">حركة بطيئة</button></div>
+  <p class="dm" id="dm"></p>
+  <h4>الخطوات</h4><ol id="ds"></ol>
+  <div class="tip"><b>الغلطة الشائعة:</b> <span id="dmis"></span></div>
+  <div class="tip"><b>التنفس:</b> <span id="db"></span></div>
+</dialog>
+<footer><div class="wrap">© 2026 Haybredx. استشر طبيبك قبل بداية أي برنامج رياضي، خصوصا إلا كانت عندك إصابة أو مرض مزمن.</div></footer>
+
+<script>
+(function(){
+  var EX=[
+    ["Squat","الأرجل","15 تكرار × 3","مبتدئ"],
+    ["Lunge","الأرجل","12 لكل رجل × 3","متوسط"],
+    ["Glute Bridge","الأرجل","15 تكرار × 3","مبتدئ"],
+    ["Push-up","الصدر والذراعين","10 إلى 15 × 3","متوسط"],
+    ["Chair Dips","الصدر والذراعين","12 تكرار × 3","متوسط"],
+    ["Knee Push-up","الصدر والذراعين","8 إلى 12 × 3","مبتدئ"],
+    ["Plank","البطن","30 إلى 45 ثانية × 3","مبتدئ"],
+    ["Crunch","البطن","15 تكرار × 3","مبتدئ"],
+    ["Leg Raise","البطن","12 تكرار × 3","متوسط"],
+    ["Burpee","كامل الجسم","8 إلى 10 × 3","متقدم"],
+    ["Mountain Climber","كامل الجسم","30 ثانية × 3","متوسط"],
+    ["Jumping Jack","كامل الجسم","40 ثانية × 3","مبتدئ"]
+  ];
+  var cats=["الكل","الأرجل","الصدر والذراعين","البطن","كامل الجسم"], cur="الكل";
+  var chips=document.getElementById("chips"), lib=document.getElementById("lib");
+  function render(){
+    chips.innerHTML="";
+    cats.forEach(function(c){
+      var b=document.createElement("button");b.type="button";b.className="chip";b.textContent=c;
+      b.setAttribute("aria-pressed",c===cur);
+      b.onclick=function(){cur=c;render()};chips.appendChild(b);
+    });
+    lib.innerHTML="";
+    EX.filter(function(e){return cur==="الكل"||e[1]===cur}).forEach(function(e){
+      var d=document.createElement("button");d.type="button";d.className="ex";d.onclick=function(){openEx(e[0])};
+      d.innerHTML="<h4></h4><p></p><span class='lvl'></span><span class='go'>شوف الحركة والشرح</span>";
+      d.children[0].textContent=e[0];d.children[1].textContent=e[1]+" · "+e[2];d.children[2].textContent=e[3];
+      lib.appendChild(d);
+    });
+  }
+  render();
+
+  var ST=[100,18,100,32,100,62,103,48,105,62,102,84,102,105];
+  var BR="شهق وانت كتهبط وزفر وانت كتطلع.";
+  var DET={
+  "Squat":{m:"الفخدين، الأرداف، أسفل الظهر",s:["وقف ورجليك بعاد بعرض الكتفين وصوابع الرجلين لقدام شوية.","هبط كأنك غادي تجلس على كرسي: الأرداف لور والظهر مستقيم والصدر مرفوع.","هبط حتى تولي الفخدين موازيين للأرض، ثم دفع بكعبيك باش ترجع."],x:"الركبتين كيدخلو للداخل. خليهم فاتجاه صوابع الرجلين.",b:BR,P:[[100,20,100,34,100,64,112,42,128,40,104,86,104,105],[88,46,90,60,68,86,104,66,122,62,108,84,104,105]]},
+  "Lunge":{m:"الفخدين، الأرداف، التوازن",s:["وقف مستقيم وخطو خطوة كبيرة لقدام.","هبط حتى تولي الركبتين زاوية 90 درجة، والركبة الخلفية قريبة من الأرض.","دفع بالكعب الأمامي باش ترجع، وبدل الرجل."],x:"الركبة الأمامية كتفوت صوابع الرجل. خليها فوق الكعب.",b:BR,P:[[100,18,100,32,100,62,103,48,105,62,104,84,104,105,96,84,96,105],[100,38,100,52,100,78,103,66,105,78,122,80,122,105,84,96,70,105]]},
+  "Glute Bridge":{m:"الأرداف، الفخدين من ور، أسفل الظهر",s:["نعس على ظهرك، الركبتين مثنيين والرجلين فالأرض بعاد بعرض الحوض.","شد الأرداف وارفع الحوض حتى يولي جسمك خط مستقيم من الكتفين للركبتين.","وقف ثانية فالفوق ثم هبط بالتدريج."],x:"تقويس أسفل الظهر. شد البطن باش تحميه.",b:"زفر وانت كترفع وشهق وانت كتهبط.",P:[[40,92,58,96,100,96,78,98,100,98,126,66,142,98],[40,92,58,96,100,68,78,98,100,98,126,62,142,98]]},
+  "Push-up":{m:"الصدر، الذراعين، الكتفين",s:["بدا بوضعية البلانك: اليدين تحت الكتفين وجسمك خط مستقيم.","هبط الصدر قريب من الأرض والكوعين بعاد شوية على الجسم، تقريبا 45 درجة.","دفع الأرض بقوة حتى تفرد الذراعين."],x:"الحوض كيهبط ولا كيطلع. شد البطن والأرداف.",b:"شهق فالنزول وزفر فالدفع.",P:[[162,42,148,52,90,68,150,76,150,100,56,84,24,100],[160,82,146,88,88,92,128,94,150,100,56,96,24,100]]},
+  "Chair Dips":{m:"الجزء الخلفي من الذراع (ترايسبس)",s:["قعد على حافة كرسي ثابت وحط يديك فيه جنبك، وبعد الحوض على الكرسي.","هبط الجسم بتثني الكوعين لور حتى 90 درجة.","دفع باليدين حتى ترجع لفوق."],x:"الكتفين كيطلعو للودنين. خليهم بعاد على الودنين.",b:BR,prop:"<rect x='56' y='72' width='32' height='6' rx='2'/><rect x='60' y='78' width='4' height='28'/>",P:[[80,32,76,48,86,82,71,60,70,72,122,74,140,104],[82,48,78,64,88,98,58,68,70,72,124,78,140,104]]},
+  "Knee Push-up":{m:"الصدر والذراعين (نسخة أخف)",s:["حط ركبتيك فالأرض واليدين تحت الكتفين.","جسمك خط مستقيم من الركبتين للراس.","هبط الصدر وارفعو بالتحكم."],x:"طي الظهر. خلي الأرداف على نفس الخط.",b:"شهق فالنزول وزفر فالدفع.",P:[[162,42,148,52,92,72,150,76,150,100,62,98,30,98],[160,84,146,90,92,94,126,96,150,100,62,98,30,98]]},
+  "Plank":{m:"البطن العميقة، الكتفين، الظهر",s:["حط الساعدين فالأرض والكوعين تحت الكتفين.","ارفع الجسم على الساعدين وصوابع الرجلين، وشد البطن والأرداف.","ثبت الوضعية وكمل تنفس عادي."],x:"الحوض كيطيح. إلا ما قدرتيش، هبط ركبتيك.",b:"تنفس بهدوء وما تحبسش النفس.",P:[[162,66,148,72,88,76,148,97,166,98,56,88,24,100],[162,64,148,70,88,72,148,97,166,98,56,86,24,100]]},
+  "Crunch":{m:"عضلات البطن العلوية",s:["نعس على ظهرك والركبتين مثنيين، ويديك خلف الراس.","شد البطن وارفع الكتفين من الأرض شوية.","هبط بالتدريج بلا ما تسقط."],x:"جبد العنق بالأيدي. الحركة خاص تجي من البطن.",b:"زفر فالرفع وشهق فالنزول.",P:[[44,92,58,96,100,96,42,78,46,90,126,66,142,98],[68,60,76,74,100,96,62,62,68,64,126,66,142,98]]},
+  "Leg Raise":{m:"أسفل البطن",s:["نعس على ظهرك واليدين جنبك والرجلين مفرودين.","ارفع الرجلين مع بعضهم حتى تولي عمودية على الأرض.","هبط بالبطء بلا ما تلمس الأرض وعاود."],x:"أسفل الظهر كيتقوس. حط يديك تحت الحوض.",b:"زفر فالرفع وشهق فالنزول.",P:[[42,92,58,96,100,96,78,98,100,98,140,96,180,98],[42,92,58,96,100,96,78,98,100,98,100,64,100,34]]},
+  "Burpee":{m:"كامل الجسم والقلب",s:["وقف ثم هبط وحط يديك فالأرض.","رجع رجليك للور حتى توصل لوضعية البلانك.","جبد الرجلين لصدرك وقفز لفوق والذراعين مرفوعين."],x:"السرعة الزايدة كتخلي الجسم يتقوس. بدا بخفة وتحكم.",b:"زفر فالقفزة.",P:[ST,[96,60,92,68,72,88,104,86,118,100,96,88,100,105],[162,42,148,52,90,68,150,76,150,100,56,84,24,100],[100,8,100,22,100,52,108,12,108,0,100,72,100,90]]},
+  "Mountain Climber":{m:"البطن، الكتفين، القلب",s:["بدا بوضعية البلانك العالية: اليدين تحت الكتفين.","جبد ركبة لصدرك.","بدل الرجلين بسرعة كأنك كتجري فمكانك."],x:"الحوض كيطلع. حافظ على جسم مستقيم.",b:"تنفس بإيقاع منتظم.",P:[[162,42,148,54,88,66,150,78,150,100,116,80,104,98,56,86,24,100],[162,42,148,54,88,66,150,78,150,100,56,84,24,100,116,80,104,98]]},
+  "Jumping Jack":{m:"كامل الجسم والكارديو",s:["وقف ورجليك مجموعين واليدين جنبك.","قفز وبعد الرجلين وارفع الذراعين فوق الراس.","قفز مرة أخرى وارجع للوضعية الأولى."],x:"النزول بصلابة. حط الرجلين بخفة على مشط القدم.",b:"تنفس بإيقاع منتظم.",P:[[100,18,100,32,100,62,103,48,105,62,102,84,102,105,98,84,98,105],[100,18,100,32,100,62,108,14,110,0,122,84,132,105,78,84,68,105]]}
+  };
+  var dlg=$("dlg"),NS="http://www.w3.org/2000/svg",fig=$("fig"),cur,idx=0,t0=0,raf=0,paused=false,slow=false,els=[];
+  function $(id){return document.getElementById(id)}
+  function full(a){return a.length<18?a.concat([a[10]-5,a[11],a[12]-5,a[13]]):a}
+  var SEG=[[1,2],[1,3],[3,4],[2,5],[5,6],[2,7],[7,8]];
+  (function(){
+    SEG.forEach(function(s,i){var l=document.createElementNS(NS,"line");if(i>4||i==1||i==2)l.setAttribute("class",i>4?"far":"");fig.appendChild(l);els.push(l)});
+    var c=document.createElementNS(NS,"circle");c.setAttribute("r","8");fig.appendChild(c);els.push(c);
+  })();
+  function draw(v){
+    SEG.forEach(function(s,i){var l=els[i];l.setAttribute("x1",v[2*s[0]]);l.setAttribute("y1",v[2*s[0]+1]);l.setAttribute("x2",v[2*s[1]]);l.setAttribute("y2",v[2*s[1]+1])});
+    els[7].setAttribute("cx",v[0]);els[7].setAttribute("cy",v[1]);
+  }
+  function frame(ts){
+    if(!t0)t0=ts;
+    var dur=slow?2400:1100,hold=slow?500:250,el=ts-t0,P=cur.P;
+    if(el>dur+hold){idx=(idx+1)%P.length;t0=ts;el=0}
+    var k=Math.min(el/dur,1);k=k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2;
+    var A=full(P[idx]),B=full(P[(idx+1)%P.length]);
+    draw(A.map(function(n,i){return n+(B[i]-n)*k}));
+    raf=requestAnimationFrame(frame);
+  }
+  function play(on){
+    paused=!on;cancelAnimationFrame(raf);
+    $("pp").textContent=on?"إيقاف الحركة":"شغل الحركة";
+    if(on){t0=0;raf=requestAnimationFrame(frame)}else{draw(full(cur.P[idx]))}
+  }
+  window.openEx=function(n){
+    cur=DET[n];if(!cur)return;idx=0;
+    var ex=EX.filter(function(e){return e[0]===n})[0];
+    $("dt").textContent=n;
+    $("dm").textContent="العضلات: "+cur.m+" · "+ex[2]+" · "+ex[3];
+    $("ds").innerHTML="";
+    cur.s.forEach(function(t){var li=document.createElement("li");li.textContent=t;$("ds").appendChild(li)});
+    $("dmis").textContent=cur.x;$("db").textContent=cur.b;
+    $("prop").innerHTML=cur.prop||"";
+    dlg.showModal();
+    play(!window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+  };
+  $("dx").onclick=function(){dlg.close()};
+  dlg.onclick=function(e){if(e.target===dlg)dlg.close()};
+  dlg.onclose=function(){cancelAnimationFrame(raf)};
+  $("pp").onclick=function(){play(paused)};
+  $("sl").onclick=function(){slow=!slow;this.setAttribute("aria-pressed",slow)};
+
+  /* interval timer */
+  var plan=["Squat","Push-up","Plank","Lunge","Jumping Jack","Glute Bridge"];
+  var WORK=40, REST=20, C=339.3;
+  var i=0, working=true, left=WORK, run=false, t=null;
+  function paint(){
+    var total=working?WORK:REST;
+    $("sec").textContent=left;
+    $("phase").textContent=working?"تمرين":"راحة";
+    $("ring").classList.toggle("rest",!working);
+    $("fg").style.strokeDashoffset=C*(1-left/total);
+    $("now").textContent=working?plan[i]:"خذ نفس";
+    $("next").textContent="التالي: "+plan[working?(i+1)%plan.length:i];
+    $("round").textContent="جولة "+(i+1)+" من "+plan.length;
+  }
+  function tick(){
+    left--;
+    if(left<=0){
+      if(working){working=false;left=REST}
+      else{working=true;i=(i+1)%plan.length;left=WORK}
+    }
+    paint();
+  }
+  $("go").onclick=function(){
+    run=!run;
+    if(run){t=setInterval(tick,1000);this.textContent="إيقاف مؤقت"}
+    else{clearInterval(t);this.textContent="كمل التمرين"}
+  };
+  paint();
+
+  /* program builder */
+  var LV={"مبتدئ":0,"متوسط":1,"متقدم":2}, built=[];
+  cats.forEach(function(c){$("bf").add(new Option(c,c))});
+  function shuffle(a){for(var j=a.length-1;j>0;j--){var r=Math.floor(Math.random()*(j+1)),x=a[j];a[j]=a[r];a[r]=x}return a}
+  function build(){
+    var lv=LV[$("bl").value],n=+$("bt").value,f=$("bf").value;
+    var a=shuffle(EX.filter(function(e){return LV[e[3]]<=lv}));
+    var rank=function(e){return f==="الكل"||e[1]===f?0:e[1]==="كامل الجسم"?1:2};
+    a.sort(function(x,y){return rank(x)-rank(y)});
+    built=a.slice(0,n);
+    var ol=$("bo");ol.innerHTML="";
+    built.forEach(function(e){var li=document.createElement("li");li.textContent=e[0];var s=document.createElement("span");s.textContent=e[1]+" · "+e[2];li.appendChild(s);ol.appendChild(li)});
+    $("be").textContent=built.length+" تمارين، كل تمرين 40 ثانية وراحة 20 ثانية. كرر الدورة 3 مرات.";
+    $("bs").hidden=false;
+  }
+  $("bm").onclick=build;
+  $("bs").onclick=function(){
+    plan=built.map(function(e){return e[0]});
+    clearInterval(t);run=false;i=0;working=true;left=WORK;
+    $("go").textContent="ابدا التمرين";paint();
+    $("top").scrollIntoView({behavior:"smooth"});
+  };
+  Array.prototype.forEach.call(document.querySelectorAll(".prog"),function(p,k){
+    var a=p.querySelector("a");a.href="#builder";
+    a.onclick=function(){$("bl").value=["مبتدئ","متوسط","متقدم"][k];build()};
+  });
+
+  /* week tracker */
+  var DAYS=["الاثنين","الثلاثاء","الأربعاء","الخميس","الجمعة","السبت","الأحد"],KEY="hw-days",done=[];
+  try{done=JSON.parse(localStorage.getItem(KEY)||"[]")}catch(err){done=[]}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(done))}catch(err){}}
+  function tracker(){
+    var box=$("tr");box.innerHTML="";
+    DAYS.forEach(function(d,k){
+      var b=document.createElement("button");b.type="button";b.textContent=d;
+      b.setAttribute("aria-pressed",done.indexOf(k)>-1);
+      b.onclick=function(){var p=done.indexOf(k);if(p>-1)done.splice(p,1);else done.push(k);save();tracker()};
+      box.appendChild(b);
+    });
+    $("tt").textContent=done.length?"كملتي "+done.length+" من 7 حصص هاد الأسبوع."+(done.length>=4?" عاش، حققتي هدفك!":""):"علّم على الأيام لي تمرنتي فيها.";
+  }
+  $("tx").onclick=function(){done=[];save();tracker()};
+  tracker();
+
+  $("form").onsubmit=function(e){
+    e.preventDefault();
+    $("msg").textContent="تسجل بريدك. غادي توصلك الرسالة الأولى قريبا.";
+    this.reset();
+  };
+})();
+</script>
+</body>
+</html>
